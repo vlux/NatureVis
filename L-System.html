@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Spiral (L-system)" />
+    <title>Spiral (L-system)</title>
+    <script src="d3/d3.js"></script>
+    <style>
+    svg {
+        background: white;
+    }
+    .curve {
+        fill: none;
+        stroke: black;
+        stroke-width: 1.5px;
+    }
+    .shadow {
+        opacity: 0.1;
+    }
+    </style>
+</head>
+<body>
+  <script>
+  /* compute a Lindenmayer system given an axiom, a number of steps and rules
+   */
+  (function() {
+      var curve, d, fractalize, height, svg, svg_path, transition, tweenDash,
+          width;
+
+      fractalize = function(config) {
+          var char, i, input, output, _i, _j, _len, _ref;
+
+          input = config.axiom;
+          for (i = _i = 0, _ref = config.steps; 0 <= _ref ? _i < _ref :
+              _i > _ref; i = 0 <= _ref ? ++_i : --_i) {
+              output = '';
+              for (_j = 0, _len = input.length; _j < _len; _j++) {
+                  char = input[_j];
+                  if (char in config.rules)
+                      output += config.rules[char];
+                  else
+                      output += char;
+              }
+              input = output;
+          }
+          return output;
+      };
+
+      /* convert a Lindenmayer string into an SVG path string
+       */
+
+      svg_path = function(config) {
+          var angle, char, path, _i, _len, _ref;
+          angle = 0.0;
+          path = 'M0 0';
+          _ref = config.fractal;
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+              char = _ref[_i];
+              if (char === '+')
+                  angle += config.angle;
+              else if (char === '-')
+                  angle -= config.angle;
+              else if (char === 'F')
+                  path += "l" + (config.side * Math.cos(angle)) + " " + (config.side * Math.sin(angle));
+          }
+          return path;
+      };
+      /* animate the path
+       */
+
+      /* from Mike Bostock's stroke dash interpolation example http://bl.ocks.org/mbostock/5649592
+       */
+      tweenDash = function() {
+          var i, l;
+          l = this.getTotalLength();
+          i = d3.interpolateString('0,' + l, l + ',' + l);
+          return function(t) {
+              return i(t);
+          };
+      };
+
+      transition = function(path) {
+          return path.transition()
+                .duration(20000)
+                .attrTween('stroke-dasharray', tweenDash);
+      };
+
+      curve = fractalize({
+          axiom: '-Y',
+          steps: 36,
+          rules: {
+              X: 'XF',
+              Y: 'Y+XF+XF'  //Y+XF+X+XF+XF+XF+XF
+          }
+      });
+
+      d = svg_path({
+          fractal: curve,
+          side: 12,
+          angle: Math.PI / 2
+      });
+
+      width = 960;
+
+      height = 500;
+
+      svg = d3.select('body')
+        	.append('svg')
+            .attr('width', width)
+            .attr('height', height);
+
+      svg.append('path')
+        .attr('class', 'curve shadow')
+        .attr('d', d)
+        .attr('transform', "translate(" + (width / 2) + "," + (height / 2) +")");
+
+      svg.append('path')
+        .attr('class', 'curve')
+        .attr('d', d)
+        .attr('transform',"translate(" + (width / 2) + "," + (height / 2) + ")")
+        .call(transition);
+
+  }).call(this);
+</script>
+</body>
+</html>
