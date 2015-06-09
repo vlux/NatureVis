@@ -61,7 +61,6 @@
 
       // animate the path
       // from Mike Bostock's stroke dash interpolation example http://bl.ocks.org/mbostock/5649592
-
       tweenDash = function() {
           var i, l;
           l = this.getTotalLength();
@@ -70,7 +69,6 @@
               return i(t);
           };
       };
-
       transition = function(path) {
           return path.transition()
                 .duration(20000)
@@ -85,7 +83,6 @@
               Y: 'Y+XF+XF'  //Y+XF+X+XF+XF+XF+XF
           }
       });
-
       d = svg_path({
           fractal: curve,
           side: 12,
@@ -93,9 +90,8 @@
       });
 
       width = 960;
-
       height = 500;
-
+      
       svg = d3.select('body')
         	.append('svg')
             .attr('width', width)
@@ -111,8 +107,8 @@
         .attr('d', d)
         .attr('transform',"translate(" + (width / 2) + "," + (height / 2) + ")")
         .call(transition);
-
   }).call(this);
+
 </script>
 </body>
 </html>
