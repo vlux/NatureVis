@@ -10,12 +10,7 @@
     body {
         font: 10px sans-serif;
     }
-    .axis path,
-    .axis line {
-      fill: none;
-      stroke: #000;
-      shape-rendering: crispEdges;
-    }
+
     .bar {
       fill: orange;
     }
@@ -28,10 +23,6 @@
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
     }
-    .x.axis path {
-      display: none;
-    }
-
     .aster-score {
       font-weight: bold;
       font-size: 300%;
@@ -78,19 +69,20 @@
     var pie = d3.layout.pie()
             .sort(null)
             .value(function(d) { return d[1]; });
+
     var pie_api = d3.layout.pie()
             .sort(null)
-            .value(function(d) { return d[1] / 15; });
+            .value(function(d) { return d[1]; });
 
     var arc = d3.svg.arc()
                 .innerRadius(innerRadius)
                 .outerRadius(function (d) {
-                  return (radius - innerRadius) * (d.value * 8.0) + innerRadius;
+                  return (radius - innerRadius) * (d.value /150) + innerRadius;
                 });
     var arc_api = d3.svg.arc()
                 .innerRadius(innerRadius)
                 .outerRadius(function (d) {
-                      return (radius - innerRadius) * (d.value / 15) + innerRadius;
+                      return (radius - innerRadius) * (d.value/150 ) + innerRadius;
                 });
 
     var outlineArc = d3.svg.arc()
@@ -112,7 +104,7 @@
 
     svg.call(tip);
 
-    d3.csv('mean_sum.csv', function(error, data){
+    d3.csv('mean_month.csv', function(error, data){
 
         var NO2dataset = [],
             APIdataset = [];
@@ -153,7 +145,7 @@
             .attr("class", "outlineArc")
             .attr("d", outlineArc);
 
-        svg.append("svg:text")
+        svg.append("text")
           .attr("class", "aster-score")
           .attr("dy", ".35em")
           .attr("text-anchor", "middle") // text-align: right
