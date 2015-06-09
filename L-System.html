@@ -6,9 +6,6 @@
     <title>Spiral (L-system)</title>
     <script src="d3/d3.js"></script>
     <style>
-    svg {
-        background: white;
-    }
     .curve {
         fill: none;
         stroke: black;
@@ -21,20 +18,18 @@
 </head>
 <body>
   <script>
-  /* compute a Lindenmayer system given an axiom, a number of steps and rules
-   */
+
+  //compute a Lindenmayer system given an axiom, a number of steps and rules
   (function() {
-      var curve, d, fractalize, height, svg, svg_path, transition, tweenDash,
-          width;
+
+      var curve, d, fractalize, height, svg, svg_path, transition, tweenDash,width;
 
       fractalize = function(config) {
           var char, i, input, output, _i, _j, _len, _ref;
-
           input = config.axiom;
-          for (i = _i = 0, _ref = config.steps; 0 <= _ref ? _i < _ref :
-              _i > _ref; i = 0 <= _ref ? ++_i : --_i) {
+          for (i = _i = 0, _ref = config.steps; 0 <= _ref ? _i < _ref :_i > _ref; i = 0 <= _ref ? ++_i : --_i) {
               output = '';
-              for (_j = 0, _len = input.length; _j < _len; _j++) {
+              for (_j = 0, _len = input.length ; _j < _len; _j++) {
                   char = input[_j];
                   if (char in config.rules)
                       output += config.rules[char];
@@ -46,9 +41,7 @@
           return output;
       };
 
-      /* convert a Lindenmayer string into an SVG path string
-       */
-
+      // convert a Lindenmayer string into an SVG path string
       svg_path = function(config) {
           var angle, char, path, _i, _len, _ref;
           angle = 0.0;
@@ -65,11 +58,10 @@
           }
           return path;
       };
-      /* animate the path
-       */
 
-      /* from Mike Bostock's stroke dash interpolation example http://bl.ocks.org/mbostock/5649592
-       */
+      // animate the path
+      // from Mike Bostock's stroke dash interpolation example http://bl.ocks.org/mbostock/5649592
+
       tweenDash = function() {
           var i, l;
           l = this.getTotalLength();
