@@ -70,7 +70,6 @@ finalapiy = zeros(120, 31);
 
 alpha = 30; % degrees(angle)
 length_F = 2;
-length_G = 0.5;
 bemid = 'YFFFFFF';
 bran1 = 'MF';
 bran2 = 'DFFF';
