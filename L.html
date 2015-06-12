@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="Spiral (L-system)" />
-    <title>L-system</title>
-    <script src="d3/d3.js"></script>
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-</head>
-<body>
+ <head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Spiral (L-system)" />
+  <title>L-system</title>
+  <script src="d3/d3.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+ </head>
+ <body>
   <script>
 
   //compute a Lindenmayer system given an axiom, a number of steps and rules
@@ -96,7 +96,7 @@
       };
 
       curve = fractalize({
-          axiom:'FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF',
+          axiom:'FFFFFFFFF[++FFFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFFF]FFFFFFFFF[--FFFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFFF]FFFFFFFFF[++FFFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFFF]FFFFFFFFF[--FFFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFFF]FFFFFFFFF[++FFFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFFF]FFFFFFFFF[--FFFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFFF]FFFFFFFFF[++FFFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFFF]FFFFFFFFF[--FFFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFFF]FFFFFFFFF[++FFFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFFF]FFFFFFFFF[--FFFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFF[--FFFFFE]FFFF[++FFFFFE]FFFFF]FFFFFFFFF',
           steps: 1,
           rules: {
 
@@ -109,49 +109,34 @@
       });
 
       width = 960;
-      height = 760;
+      height = 800;
 
       svg = d3.select('body')
         	.append('svg')
             .attr('width', width)
             .attr('height', height)
-            .append("g")
-            .attr('transform', "translate(" + (width / 2) + "," + (height) +")");
 
       svg.append('path')
          .attr('class', 'curve shadow')
          .attr('d', d)
+         .attr('transform', "translate(" + (width / 2) + "," + (height) +")");
 
       svg.append('path')
         .attr('class', 'curve')
         .attr('d', d)
+        .attr('transform', "translate(" + (width / 2) + "," + (height) +")");
     //    .call(transition);
 
-    var radius = Math.min(width, height) / 2,
-        innerRadius = 0.2 * radius;
+    var radius = Math.min(width, height) / 7;
 
     var pie = d3.layout.pie()
             .sort(null)
             .value(function(d) { return d[1]; });
 
-    var pie_api = d3.layout.pie()
-            .sort(null)
-            .value(function(d) { return d[1]; });
-
     var arc = d3.svg.arc()
-                .innerRadius(innerRadius)
                 .outerRadius(function (d) {
-                  return (radius - innerRadius) * (d.value /150) + innerRadius;
+                  return radius * (Math.log(d.value) / 20) ;
                 });
-    var arc_api = d3.svg.arc()
-                .innerRadius(innerRadius)
-                .outerRadius(function (d) {
-                      return (radius - innerRadius) * (d.value/150 ) + innerRadius;
-                });
-
-    var outlineArc = d3.svg.arc()
-              .innerRadius(innerRadius)
-              .outerRadius(radius);
 
     var tip = d3.tip()
                 .attr('class', 'd3-tip')
@@ -159,12 +144,6 @@
                 .html(function(d) {
                     return d.data[0] + " : <span style='color:orangered'>" + d.data[1] + "</span>";
                 });
-
-    var svg = d3.select("body").append("svg")
-            .attr("width", width)
-            .attr("height", height)
-            .append("g")
-            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
     svg.call(tip);
 
@@ -181,14 +160,15 @@
         });
 
         svg.selectAll(".solidArc")
-            .data(pie_api(APIdataset))
+            .data(pie(APIdataset))
             .enter().append("path")
             .attr("fill", "orange")
             .attr("class", "solidArc")
             .attr("stroke", "silver")
-            .attr("d", arc_api)
+            .attr("d", arc)
             .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+            .on('mouseout', tip.hide)
+            .attr('transform', "translate(" + (piex[0] + width / 2) + "," + (piey[0] + height) +")");
 
         svg.selectAll(".solidArcs")
             .data(pie(NO2dataset))
@@ -198,44 +178,34 @@
             .attr("stroke", "silver")
             .attr("d", arc)
             .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
-
-        svg.selectAll(".outlineArc")
-            .data(pie(APIdataset))
-            .enter().append("path")
-            .attr("fill", "none")
-            .attr("stroke", "gray")
-            .attr("opacity","0.15")
-            .attr("class", "outlineArc")
-            .attr("d", outlineArc);
-
-        svg.append("text")
-          .attr("class", "aster-score")
-          .attr("dy", ".35em")
-          .attr("text-anchor", "middle") // text-align: right
-          .text("NO2");
+            .on('mouseout', tip.hide)
+            .attr('transform', "translate(" + (piex[0] + width / 2) + "," + (piey[0] + height) +")");
 
     });
-
-    //    svg.selectAll("circle")
-    //       .data(piex)
-    //       .enter()
-    //       .append("circle")
-    //       .attr("cx",function(d,i){
-    //           return piex[i];
-    //       })
-    //       .attr("cy",function(d,i){
-    //           return piey[i];
-    //       })
-    //       .attr("r",4)
-    //       .style("fill","red");
-
 
   }).call(this);
 
 </script>
-</body>
+ </body>
 </html>
+
+
+<!-- svg.selectAll("circle")
+        .data(piex)
+       .enter()
+       .append("circle")
+       .attr("cx",function(d,i){
+           return piex[i];
+       })
+       .attr("cy",function(d,i){
+           return piey[i];
+       })
+       .attr("r",4)
+       .style("fill","red")
+       .on("mouseover",function(d,i){
+           console.log(piex[i] + " " + piey[i]);
+       }); -->
+
 
 <!-- matlab code -->
 <!--
