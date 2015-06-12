@@ -5,16 +5,8 @@
     <meta name="description" content="Spiral (L-system)" />
     <title>L-system</title>
     <script src="d3/d3.js"></script>
-    <style>
-    .curve {
-        fill: none;
-        stroke: black;
-        stroke-width: 1.5px;
-    }
-    .shadow {
-        opacity: 0.1;
-    }
-    </style>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
   <script>
@@ -25,6 +17,8 @@
       var curve, d, fractalize, height, svg, svg_path, transition, tweenDash,width;
 
       var piex = [],piey = [];
+
+      var days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
       fractalize = function(config) {
           var char, i, input, output, _i, _j, _len, _ref;
@@ -105,49 +99,137 @@
           axiom:'FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF[++FFFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF]FFFFFFFF[--FFFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF[--FFFE]FFF[++FFFE]FFF]FFFFFFFF',
           steps: 1,
           rules: {
+
           }
       });
       d = svg_path({
           fractal: curve,
-          side: 6,      //length
+          side: 7,      //length
           da:30 / 180 * Math.PI
       });
 
       width = 960;
       height = 760;
 
-      console.log(piex);
-      console.log(piey);
-
       svg = d3.select('body')
         	.append('svg')
             .attr('width', width)
-            .attr('height', height);
+            .attr('height', height)
+            .append("g")
+            .attr('transform', "translate(" + (width / 2) + "," + (height) +")");
 
       svg.append('path')
          .attr('class', 'curve shadow')
          .attr('d', d)
-         .attr('transform', "translate(" + (width / 2) + "," + (height) +")");
 
       svg.append('path')
         .attr('class', 'curve')
         .attr('d', d)
-        .attr('transform',"translate(" + (width / 2) + "," + (height) + ")")
-        //.call(transition);
+    //    .call(transition);
 
-       svg.selectAll("circle")
-          .data(piex)
-          .enter()
-          .append("circle")
-          .attr("cx",function(d,i){
-              return piex[i];
-          })
-          .attr("cy",function(d,i){
-              return piey[i];
-          })
-          .attr("r",3)
-          .attr('transform',"translate(" + (width / 2) + "," + (height) + ")")
-          .style("fill","red");
+    var radius = Math.min(width, height) / 2,
+        innerRadius = 0.2 * radius;
+
+    var pie = d3.layout.pie()
+            .sort(null)
+            .value(function(d) { return d[1]; });
+
+    var pie_api = d3.layout.pie()
+            .sort(null)
+            .value(function(d) { return d[1]; });
+
+    var arc = d3.svg.arc()
+                .innerRadius(innerRadius)
+                .outerRadius(function (d) {
+                  return (radius - innerRadius) * (d.value /150) + innerRadius;
+                });
+    var arc_api = d3.svg.arc()
+                .innerRadius(innerRadius)
+                .outerRadius(function (d) {
+                      return (radius - innerRadius) * (d.value/150 ) + innerRadius;
+                });
+
+    var outlineArc = d3.svg.arc()
+              .innerRadius(innerRadius)
+              .outerRadius(radius);
+
+    var tip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([0, 0])
+                .html(function(d) {
+                    return d.data[0] + " : <span style='color:orangered'>" + d.data[1] + "</span>";
+                });
+
+    var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    svg.call(tip);
+
+    d3.csv('mean_month.csv', function(error, data){
+
+        var NO2dataset = [],
+            APIdataset = [];
+
+        data.forEach(function(d) {
+            if(d.key =="NO2")
+                NO2dataset.push([d["key"], +d["2002"], +d["2003"], +d["2004"], +d["2005"], +d["2006"], +d["2007"], +d["2008"], +d["2009"], +d["2010"], +d["2011"]]);
+            if(d.key =="API")
+                APIdataset.push([d["key"], +d["2002"], +d["2003"], +d["2004"], +d["2005"], +d["2006"], +d["2007"], +d["2008"], +d["2009"], +d["2010"], +d["2011"]]);
+        });
+
+        svg.selectAll(".solidArc")
+            .data(pie_api(APIdataset))
+            .enter().append("path")
+            .attr("fill", "orange")
+            .attr("class", "solidArc")
+            .attr("stroke", "silver")
+            .attr("d", arc_api)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
+
+        svg.selectAll(".solidArcs")
+            .data(pie(NO2dataset))
+            .enter().append("path")
+            .attr("fill", "green")
+            .attr("class", "solidArc")
+            .attr("stroke", "silver")
+            .attr("d", arc)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
+
+        svg.selectAll(".outlineArc")
+            .data(pie(APIdataset))
+            .enter().append("path")
+            .attr("fill", "none")
+            .attr("stroke", "gray")
+            .attr("opacity","0.15")
+            .attr("class", "outlineArc")
+            .attr("d", outlineArc);
+
+        svg.append("text")
+          .attr("class", "aster-score")
+          .attr("dy", ".35em")
+          .attr("text-anchor", "middle") // text-align: right
+          .text("NO2");
+
+    });
+
+    //    svg.selectAll("circle")
+    //       .data(piex)
+    //       .enter()
+    //       .append("circle")
+    //       .attr("cx",function(d,i){
+    //           return piex[i];
+    //       })
+    //       .attr("cy",function(d,i){
+    //           return piey[i];
+    //       })
+    //       .attr("r",4)
+    //       .style("fill","red");
+
 
   }).call(this);
 
