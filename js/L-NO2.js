@@ -144,6 +144,13 @@
                 ]);
         });
 
+        //   d3.csv('sum.csv',function(data) {
+        //     dataset = data.map(function(d) {
+        //       return [ + d["2002"], +d["2003"], +d["2004"], +d["2005"], +d["2006"], +d["2007"], +d["2008"], +d["2009"], +d["2010"], +d["2011"]];
+        //     });
+        //     console.log(dataset[0][0])
+        //   });
+
         var months = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273,
             304, 334, 365
         ];
@@ -193,7 +200,7 @@
         .attr('dx', function() {
             return width / 2 - 25;
         })
-        .attr("dy", "25")
+        .attr("dy", "30")
         .attr("font-size", "25px")
         .text("NO2");
 
