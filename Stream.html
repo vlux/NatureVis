@@ -64,15 +64,15 @@
 
         var yAxis = d3.svg.axis().scale(y);
 
-        var yAxisr = d3.svg.axis().scale(y);
-
         var stack = d3.layout.stack()
                     .offset("silhouette")
                     .values(function(d) {
                          return d.values;
-                    }).x(function(d) {
+                    })
+                    .x(function(d) {
                          return d.date;
-                    }).y(function(d) {
+                    })
+                    .y(function(d) {
                          return d.value;
                     });
 
@@ -81,8 +81,7 @@
                         return d.key;
                     });
 
-        var area = d3.svg
-                    .area()
+        var area = d3.svg.area()
                     .interpolate("cardinal")
                     .x(function(d) {
                         return x(d.date);

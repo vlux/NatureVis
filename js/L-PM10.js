@@ -189,6 +189,14 @@
         }
     });
 
+    svg.append("text")
+        .attr('dx', function() {
+            return width / 2 - 25;
+        })
+        .attr("dy", "25")
+        .attr("font-size", "25px")
+        .text("PM10");
+
 }).call(this);
 
 
