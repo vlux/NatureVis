@@ -80,12 +80,12 @@
     });
     d = svg_path({
         fractal: curve,
-        side: 6.5, //length
+        side: 6, //length
         da: 30 / 180 * Math.PI
     });
 
     width = 700;
-    height = 870;
+    height = 800;
 
     svg = d3.select('#NO2')
         .append('svg')
@@ -93,18 +93,12 @@
         .attr('height', height)
 
     svg.append('path')
-        .attr('class', 'curve shadow')
-        .attr('d', d)
-        .attr('transform', "translate(" + (width / 2) + "," + (height) +
-            ")");
-
-    svg.append('path')
         .attr('class', 'curve')
         .attr('d', d)
         .attr('transform', "translate(" + (width / 2) + "," + (height) +
             ")");
 
-    var radius = Math.min(width, height) / 9;
+    var radius = Math.min(width, height) / 10;
 
     var pie = d3.layout.pie()
         .sort(null)
@@ -177,7 +171,7 @@
                     .enter().append("path")
                     .attr("fill", "rgb(20, 119, 174)")
                     //.attr("stroke", "silver")
-                    .attr("class", "solidArc")
+                    //.attr("class", "solidArc")
                     .attr("d", arc)
                     .on('mouseover', tip.show)
                     .on('mouseout', tip.hide)
@@ -190,7 +184,7 @@
                     .enter().append("path")
                     .attr("fill", "rgb(230, 233, 82)")
                     //.attr("stroke", "silver")
-                    .attr("class", "solidArc")
+                    //.attr("class", "solidArc")
                     .attr("d", arc)
                     .on('mouseover', tip.show)
                     .on('mouseout', tip.hide)
