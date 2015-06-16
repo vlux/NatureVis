@@ -5,7 +5,9 @@
         width;
 
     var piex = [],
-        piey = [];
+        piey = [],
+        rootx = [],
+        rooty = [];
 
     fractalize = function(config) {
         var char, i, input, output, _i, _j, _len, _ref;
@@ -61,13 +63,16 @@
             } else if (char === 'E') {
                 piex.push(xT);
                 piey.push(yT);
+            } else if (char === 'G') {
+                rootx.push(xT);
+                rooty.push(yT);
             }
         }
         return path;
     };
 
     curve = fractalize({
-        axiom: 'FFFFFFFF[++FFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFF]FFFFFFFFFF[--FFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFF]FFFFFFFFFF[++FFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFF]FFFFFFFFFF[--FFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFF]FFFFFFFFFF[++FFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFF]FFFFFFFFFF[--FFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFF]FFFFFFFFFF[++FFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFF]FFFFFFFFFF[--FFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFF]FFFFFFFFFF[++FFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFF]FFFFFFFFFF[--FFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFF]FFFFFFFFFF',
+        axiom: 'GFFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFFG',
         steps: 1,
         rules: {
 
@@ -75,12 +80,12 @@
     });
     d = svg_path({
         fractal: curve,
-        side: 6, //length
+        side: 6.5, //length
         da: 30 / 180 * Math.PI
     });
 
-    width = 600;
-    height = 800;
+    width = 700;
+    height = 870;
 
     svg = d3.select('#NO2')
         .append('svg')
@@ -99,7 +104,7 @@
         .attr('transform', "translate(" + (width / 2) + "," + (height) +
             ")");
 
-    var radius = Math.min(width, height) / 8;
+    var radius = Math.min(width, height) / 9;
 
     var pie = d3.layout.pie()
         .sort(null)
@@ -200,28 +205,42 @@
         .attr('dx', function() {
             return width / 2 - 25;
         })
-        .attr("dy", "30")
+        .attr("dy", "50")
         .attr("font-size", "25px")
         .text("NO2");
 
 }).call(this);
 
 
+// svg.selectAll('circle')
+//     .data(rootx)
+//     .enter()
+//     .append('circle')
+//     .attr('cx', function(d, i) {
+//         return rootx[i] + width / 2;
+//     })
+//     .attr('cy', function(d, i) {
+//         return rooty[i] + height;
+//     })
+//     .attr('r', '4')
+//     .attr('fill', 'red')
+
+
 // matlab code
-// bemid = 'FFFFFFFF';
-// bran1 = 'FFF';
-// bran2 = 'FFF';
+// bemid = 'FFFFFFFFFF';
+// bran1 = 'FFFF';
+// bran2 = 'FFFFFF';
 // branc1 = [bran1 '[++' bran2 'E]' bran1 '[--' bran2 'E]'];
 // branc2 = [bran1 '[--' bran2 'E]' bran1 '[++' bran2 'E]'];
-// branch1 = ['F'];
-// branch2 = ['F'];
+// branch1 = ['GF'];
+// branch2 = ['GF'];
 // month = 12;
 // for i = 1: month / 2
 //     branch1 = [branch1 branc1];
 //     branch2 = [branch2 branc2];
 // end
-// branch1 = [branch1 bran2];
-// branch2 = [branch2 bran2];
-// axiom = [bemid '[++' branch1   ']' bemid '[--' branch2   ']' bemid '[++' branch1   ']' bemid '[--' branch2   ']'...
+// branch1 = [branch1 bran2 'G'];
+// branch2 = [branch2 bran2 'G'];
+// axiom = ['G' bemid '[++' branch1   ']' bemid '[--' branch2   ']' bemid '[++' branch1   ']' bemid '[--' branch2   ']'...
 //     bemid '[++' branch1   ']' bemid '[--' branch2   ']' bemid '[++' branch1   ']'...
-//     bemid '[--' branch2   ']' bemid '[++' branch1   ']' bemid '[--' branch2   ']' bemid];
+//     bemid '[--' branch2   ']' bemid '[++' branch1   ']' bemid '[--' branch2   ']' bemid 'G'];
