@@ -205,11 +205,21 @@
 
 
     path2 = '';
-    for (var i = 1; i <= 20; i += 2) {
+    for (var i = 1; i <= 20; i += 4) {
         path2 += 'M' + rootx[i] + ' ' + rooty[i]
-        path2 += "L" + rootx[i] + " " + (rooty[i] + 9);
-        path2 += "L" + rootx[i + 1] + " " + rooty[i + 1];
-        path2 += "L" + rootx[i] + " " + (rooty[i] - 9);
+        path2 += 'Q' + (rootx[i] - 30) + ' ' + (rooty[i] + 15) + ' ' +
+            rootx[i + 1] + ' ' + rooty[i + 1];
+        path2 += 'M' + rootx[i] + ' ' + rooty[i]
+        path2 += 'Q' + (rootx[i] - 30) + ' ' + (rooty[i] - 30) + ' ' +
+            rootx[i + 1] + ' ' + rooty[i + 1];
+    }
+    for (var i = 3; i <= 20; i += 4) {
+        path2 += 'M' + rootx[i] + ' ' + rooty[i]
+        path2 += 'Q' + (rootx[i] + 30) + ' ' + (rooty[i] + 15) + ' ' +
+            rootx[i + 1] + ' ' + rooty[i + 1];
+        path2 += 'M' + rootx[i] + ' ' + rooty[i]
+        path2 += 'Q' + (rootx[i] + 30) + ' ' + (rooty[i] - 30) + ' ' +
+            rootx[i + 1] + ' ' + rooty[i + 1];
     }
 
     svg.append('path')
@@ -220,14 +230,15 @@
 
     path3 = '';
     path3 += 'M' + rootx[0] + ' ' + rooty[0];
-    path3 += "L" + (rootx[0] - 15) + " " + rooty[0];
-    path3 += "L" + (rootx[21] - 2) + " " + rooty[21];
-    path3 += "L" + (rootx[21] + 2) + " " + rooty[21];
-    path3 += "L" + (rootx[0] + 15) + " " + rooty[0];
+    path3 += 'Q' + (rootx[0] - 30) + ' ' + rooty[0] + ' ' + rootx[21] + ' ' +
+        rooty[21];
+    path3 += 'M' + rootx[0] + ' ' + rooty[0];
+    path3 += 'Q' + (rootx[0] + 30) + ' ' + rooty[0] + ' ' + rootx[21] + ' ' +
+        rooty[21];
 
     svg.append('path')
         .attr('d', path3)
-        .attr('fill', '#719f70')
+        .attr('fill', '#528552')
         .attr('transform', "translate(" + (width / 2) + "," + (height) +
             ")");
 
