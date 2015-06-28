@@ -203,8 +203,35 @@
         .attr("font-size", "25px")
         .text("NO2");
 
-}).call(this);
 
+    path2 = '';
+    for (var i = 1; i <= 20; i += 2) {
+        path2 += 'M' + rootx[i] + ' ' + rooty[i]
+        path2 += "L" + rootx[i] + " " + (rooty[i] + 9);
+        path2 += "L" + rootx[i + 1] + " " + rooty[i + 1];
+        path2 += "L" + rootx[i] + " " + (rooty[i] - 9);
+    }
+
+    svg.append('path')
+        .attr('d', path2)
+        .attr('fill', '#84cf82')
+        .attr('transform', "translate(" + (width / 2) + "," + (height) +
+            ")");
+
+    path3 = '';
+    path3 += 'M' + rootx[0] + ' ' + rooty[0];
+    path3 += "L" + (rootx[0] - 15) + " " + rooty[0];
+    path3 += "L" + (rootx[21] - 2) + " " + rooty[21];
+    path3 += "L" + (rootx[21] + 2) + " " + rooty[21];
+    path3 += "L" + (rootx[0] + 15) + " " + rooty[0];
+
+    svg.append('path')
+        .attr('d', path3)
+        .attr('fill', '#719f70')
+        .attr('transform', "translate(" + (width / 2) + "," + (height) +
+            ")");
+
+}).call(this);
 
 // svg.selectAll('circle')
 //     .data(rootx)
@@ -218,7 +245,6 @@
 //     })
 //     .attr('r', '4')
 //     .attr('fill', 'red')
-
 
 // matlab code
 // bemid = 'FFFFFFFFFF';
