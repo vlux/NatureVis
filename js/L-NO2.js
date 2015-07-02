@@ -228,13 +228,36 @@
         .attr('transform', "translate(" + (width / 2) + "," + (height) +
             ")");
 
+    var tempx = rootx[0] - 30,
+        tempy = rooty[0],
+        segx = 30 / 100,
+        segy = (rooty[0] - rooty[21]) / 100;
     path3 = '';
     path3 += 'M' + rootx[0] + ' ' + rooty[0];
-    path3 += 'Q' + (rootx[0] - 30) + ' ' + rooty[0] + ' ' + rootx[21] + ' ' +
-        rooty[21];
+    path3 += 'L' + tempx + '  ' + rooty[0];
+    for (var i = 0; i < 100; ++i) {
+        tempx += segx;
+        tempy -= segy
+        path3 += 'L' + tempx + ' ' + tempy;
+    }
+    var tempx = rootx[0] + 30,
+        tempy = rooty[0],
+        segx = 30 / 100,
+        segy = (rooty[0] - rooty[21]) / 100;
     path3 += 'M' + rootx[0] + ' ' + rooty[0];
-    path3 += 'Q' + (rootx[0] + 30) + ' ' + rooty[0] + ' ' + rootx[21] + ' ' +
-        rooty[21];
+    path3 += 'L' + tempx + '  ' + rooty[0];
+    for (var i = 0; i < 100; ++i) {
+        tempx -= segx;
+        tempy -= segy
+        path3 += 'L' + tempx + ' ' + tempy;
+    }
+
+    // path3 += 'Q' + (rootx[0] - 30) + ' ' + rooty[0] + ' ' + rootx[21] + ' ' +
+    //     rooty[21];
+    // path3 += 'M' + rootx[0] + ' ' + rooty[0];
+    // path3 += 'Q' + (rootx[0] + 30) + ' ' + rooty[0] + ' ' + rootx[21] + ' ' +
+    //     rooty[21];
+
 
     svg.append('path')
         .attr('d', path3)
