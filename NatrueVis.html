@@ -10,18 +10,18 @@
       <link href="css/button.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
+      <div class="chart"></div>
       <div id="sequence" style = "text-align:center">
-         <button id = "change1">NO2</button>
-         <button id = "change2">SO2</button>
-         <button id = "change3">PM10</button>
+         <button id = "change1" class="button button-large button-plain button-border button-box ">NO2</button>
+         <button id = "change2" class="button button-large button-plain button-border button-box ">SO2</button>
+         <button id = "change3" class="button button-large button-plain button-border button-box ">PM10</button>
       </div>
       <div id="tree" style = "text-align:center"></div>
-      <div class="chart"></div>
    </body>
    <script src = "js/tree.js"></script>
    <script src = "js/stream.js"></script>
    <script>
-       chart("stream.csv", "blue");
+       chart("stream.csv");
        d3.selectAll("#change1").on("click", function() {
            draw("NO2");
        });

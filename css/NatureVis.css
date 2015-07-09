@@ -1,11 +1,13 @@
 body {
     font: 10px sans-serif;
-    background-color: #c2c2c2;
+    background-image:url(../image/3.jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 p {
     font: 12pxhelvetica;
 }
-button{
+/*button{
     width: 160px;
     height: 30px;
     margin-left: 500px;
@@ -13,28 +15,45 @@ button{
     font-family: Microsoft Yahei;
     font-size: 14px;
     font-weight: 600;
+}*/
+#change1{
+    margin:0 10%;
+}
+#change2{
+    margin:0 10%;
+}
+#change3{
+    margin:0 10%;
 }
 #sequence {
   width: 600px;
   height: 70px;
-  padding-left:40%;
+  padding-left:36%;
   font-family: Microsoft Yahei;
   font-size: 15px;
   font-weight: 600;
+   margin-top:30px
 }
 #tree {
   position: relative;
-  margin-bottom:30px;
-  /*margin-top:50px;*/
+  /*margin-bottom:30px;
+  margin-top:50px;*/
 }
 
 .axis path,
 .axis line {
     fill: none;
-    stroke: #000;
+    stroke: white;
     stroke-width: 2px;
     shape-rendering: crispEdges;
 }
+.axis text{
+    font-size:15px;
+    font-weight:600;
+    font-family: Microsoft Yahei;
+    fill:white;
+}
+
 .curve {
     fill: none;
     stroke: black;

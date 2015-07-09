@@ -139,7 +139,7 @@ for (var i = 3; i <= 20; i += 4) {
 
 svg.append('path')
     .attr('d', path2)
-    .attr('fill', '#84cf82')
+    .attr('fill', 'rgb(60,148,139)')
     .attr('transform', "translate(" + (width / 2) + "," + (height) +
         ")");
 
@@ -173,83 +173,112 @@ svg.append('path')
     .attr('transform', "translate(" + (width / 2) + "," + (height) +
         ")");
 
-draw("NO2");
+
+
+var NO2dataset = [],
+    SO2dataset = [],
+    PM10dataset = [],
+    APIdataset = [],
+    leafdataset = [];
+
+d3.csv('sum_api.csv', function(data) {
+    data.forEach(function(d) {
+        if (d.key == "NO2")
+            NO2dataset.push([d["key"], +d["2002"], +d[
+                    "2003"], +d["2004"], +d["2005"], +
+                d["2006"], +d["2007"], +d["2008"], +
+                d["2009"], +d["2010"], +d["2011"], +
+                d["month"]
+            ]);
+        if (d.key == "SO2")
+            SO2dataset.push([d["key"], +d["2002"], +d[
+                    "2003"], +d["2004"], +d["2005"], +
+                d["2006"], +d["2007"], +d["2008"], +
+                d["2009"], +d["2010"], +d["2011"], +
+                d["month"]
+            ]);
+        if (d.key == "PM10")
+            PM10dataset.push([d["key"], +d["2002"], +d[
+                    "2003"], +d["2004"], +d["2005"], +
+                d["2006"], +d["2007"], +d["2008"], +
+                d["2009"], +d["2010"], +d["2011"], +
+                d["month"]
+            ]);
+        if (d.key == "API")
+            APIdataset.push([d["key"], +d["2002"], +d[
+                    "2003"], +d["2004"], +d["2005"], +
+                d["2006"], +d["2007"], +d["2008"], +
+                d["2009"], +d["2010"], +d["2011"], +
+                d["month"]
+            ]);
+    });
+    draw("NO2");
+})
 
 function draw(pollution) {
 
+    if (pollution == "NO2")
+        leafdataset = NO2dataset;
+    else if (pollution == "SO2")
+        leafdataset = SO2dataset;
+    else if (pollution == "PM10")
+        leafdataset = PM10dataset;
+
     d3.select("#tree #leaf").remove();
 
-    d3.csv('sum_api.csv', function(error, data) {
+    var months = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273,
+        304, 334, 365
+    ];
 
-        var NO2dataset = [];
-        var APIdataset = [];
-        data.forEach(function(d) {
-            if (d.key == pollution)
-                NO2dataset.push([d["key"], +d["2002"], +d[
-                        "2003"], +d["2004"], +d["2005"], +
-                    d["2006"], +d["2007"], +d["2008"], +
-                    d["2009"], +d["2010"], +d["2011"], +
-                    d["month"]
-                ]);
-            if (d.key == "API")
-                APIdataset.push([d["key"], +d["2002"], +d[
-                        "2003"], +d["2004"], +d["2005"], +
-                    d["2006"], +d["2007"], +d["2008"], +
-                    d["2009"], +d["2010"], +d["2011"], +
-                    d["month"]
-                ]);
-        });
-        var months = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273,
-            304, 334, 365
-        ];
-        for (var j = 0; j < 10; ++j) {
-            for (var k = 1; k <= 12; ++k) {
-                var tapi = [],
-                    tno2 = [];
+    for (var j = 0; j < 10; ++j) {
+        for (var k = 1; k <= 12; ++k) {
+            var tapi = [],
+                tleaf = [];
 
-                for (var p = months[k - 1]; p < months[k]; ++p)
-                    tapi.push(APIdataset[p][j + 1])
-                for (var p = months[k - 1]; p < months[k]; ++p)
-                    tno2.push(NO2dataset[p][j + 1]);
+            for (var p = months[k - 1]; p < months[k]; ++p)
+                tapi.push(APIdataset[p][j + 1])
+            for (var p = months[k - 1]; p < months[k]; ++p)
+                tleaf.push(leafdataset[p][j + 1]);
 
-                var pos = j * 12 + k - 1;
+            var pos = j * 12 + k - 1;
 
-                svg.selectAll(".solidArcc")
-                    .data(pie(tapi))
-                    .enter().append("path")
-                    .attr("fill", "rgb(20, 119, 174)")
-                    //.attr("stroke", "silver")
-                    //.attr("class", "solidArc")
-                    .attr("d", arc)
-                    .on('mouseover', tip.show)
-                    .on('mouseout', tip.hide)
-                    .attr("class", "leaf")
-                    .attr('transform', "translate(" + (piex[pos] +
-                            width / 2) + "," + (piey[pos] + height) +
-                        ")");
+            svg.selectAll(".solidArcc")
+                .data(pie(tapi))
+                .enter().append("path")
+                .attr("fill", "rgb(20, 119, 174)")
+                //.attr("stroke", "silver")
+                //.attr("class", "solidArc")
+                .attr("d", arc)
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide)
+                .attr("class", "leaf")
+                .attr('transform', "translate(" + (piex[pos] +
+                        width / 2) + "," + (piey[pos] + height) +
+                    ")");
 
-                svg.selectAll(".solidArcs")
-                    .data(pie(tno2))
-                    .enter().append("path")
-                    .attr("fill", "rgb(230, 233, 82)")
-                    //.attr("stroke", "silver")
-                    //.attr("class", "solidArc")
-                    .attr("d", arc)
-                    .on('mouseover', tip.show)
-                    .on('mouseout', tip.hide)
-                    .attr("class", "leaf")
-                    .attr('transform', "translate(" + (piex[pos] +
-                            width / 2) + "," + (piey[pos] + height) +
-                        ")");
-            }
+            svg.selectAll(".solidArcs")
+                .data(pie(tleaf))
+                .enter().append("path")
+                .attr("fill", "rgb(230, 233, 82)")
+                //.attr("stroke", "silver")
+                //.attr("class", "solidArc")
+                .attr("d", arc)
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide)
+                .attr("class", "leaf")
+                .attr('transform', "translate(" + (piex[pos] +
+                        width / 2) + "," + (piey[pos] + height) +
+                    ")");
         }
-    });
-    d3.selectAll("text").remove();
+    }
+
+    d3.selectAll("#tree text").remove();
     svg.append("text")
         .attr('dx', function() {
-            return width / 2 - 25;
+            return width / 2 - 30;
         })
         .attr("dy", "50")
-        .attr("font-size", "25px")
+        .attr("fill", "silver")
+        .attr("font-size", "30px")
         .text(pollution);
 }

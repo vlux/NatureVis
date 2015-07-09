@@ -1,17 +1,11 @@
 var datearray = [];
 var colorrange = [];
 
-function chart(csvpath, color) {
+function chart(csvpath) {
 
-    if (color == "blue")
-        colorrange = ["#2ca02c", "#7f7f7f", "#ff7f0e", "#A6BDDB", "#D0D1E6",
-            "#F1EEF6"
-        ];
-    // else if (color == "pink")
-    //   colorrange = ["#980043", "#DD1C77", "#DF65B0", "#C994C7", "#D4B9DA", "#F1EEF6"];
-    // else if (color == "orange")
-    //   colorrange = ["#B30000", "#E34A33", "#FC8D59", "#FDBB84", "#FDD49E", "#FEF0D9"];
-    //
+    colorrange = ["#10e3e3", "#7f7f7f", "#ff7f0e", "#A6BDDB", "#D0D1E6",
+        "#F1EEF6"
+    ]
     strokecolor = colorrange[0];
 
     var format = d3.time.format("%y/%m/%d");
@@ -31,8 +25,11 @@ function chart(csvpath, color) {
         .style("position", "absolute")
         .style("z-index", "20")
         .style("visibility", "hidden")
-        .style("top", "30px")
-        .style("left", "55px");
+        .style("top", "20px")
+        .style("left", "80px")
+        .style("font-size", "17px")
+        .style("font-weight", "bold")
+        .style("color", "silver");
 
     var x = d3.time.scale().range([0, width]);
 
@@ -157,7 +154,6 @@ function chart(csvpath, color) {
                         "</p>").style("visibility", "visible");
             })
             .on("mouseout", function(d, i) {
-
                 svg.selectAll(".layer")
                     .transition().duration(250)
                     .attr("opacity", "1");
@@ -180,18 +176,17 @@ function chart(csvpath, color) {
             .style("top", "10px")
             .style("bottom", "30px")
             .style("left", "0px")
-            .style("background", "gray");
+            .style("background", "white");
 
         d3.select(".chart")
-            .on("mousemove", function() {
+            .on("mouseout", function() {
                 mousex = d3.mouse(this);
                 mousex = mousex[0] + 5;
                 vertical.style("left", mousex + "px")
+                vertical.style("visibility", "visible")
             })
-            .on("mouseover", function() {
-                mousex = d3.mouse(this);
-                mousex = mousex[0] + 5;
-                vertical.style("left", mousex + "px")
+            .on("mouseleave", function() {
+                vertical.style("visibility", "hidden")
             });
     });
 }
