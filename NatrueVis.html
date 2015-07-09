@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>NatureVis</title>
+      <script src="d3/d3.js"></script>
+      <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+      <link href="css/NatureVis.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <div id="tree" style = "float:center">
+         <button id = "change1">NO2</button>
+         <button id = "change2">SO2</button>
+         <button id = "change3">PM10</button>
+      </div>
+      <div class="chart"></div>
+   </body>
+   <script src = "js/tree.js"></script>
+   <script src = "js/stream.js"></script>
+   <script>
+       chart("stream.csv", "blue");
+       d3.selectAll("#change1").on("click", function() {
+           draw("NO2");
+       });
+       d3.selectAll("#change2").on("click", function() {
+           draw("SO2");
+       });
+       d3.selectAll("#change3").on("click", function() {
+           draw("PM10");
+       });
+   </script>
+</html>
