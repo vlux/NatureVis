@@ -199,11 +199,9 @@ function draw(pollution) {
                     d["month"]
                 ]);
         });
-
         var months = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273,
             304, 334, 365
         ];
-
         for (var j = 0; j < 10; ++j) {
             for (var k = 1; k <= 12; ++k) {
                 var tapi = [],
@@ -246,4 +244,12 @@ function draw(pollution) {
             }
         }
     });
+    d3.selectAll("text").remove();
+    svg.append("text")
+        .attr('dx', function() {
+            return width / 2 - 25;
+        })
+        .attr("dy", "50")
+        .attr("font-size", "25px")
+        .text(pollution);
 }

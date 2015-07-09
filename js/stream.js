@@ -18,9 +18,9 @@ function chart(csvpath, color) {
 
     var margin = {
         top: 20,
-        right: 40,
+        right: 50,
         bottom: 30,
-        left: 30
+        left: 50
     };
     var width = document.body.clientWidth - margin.left - margin.right;
     var height = 400 - margin.top - margin.bottom;

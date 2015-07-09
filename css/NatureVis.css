@@ -1,8 +1,6 @@
 body {
     font: 10px sans-serif;
-}
-.chart {
-    background: #fff;
+    background-color: #c2c2c2;
 }
 p {
     font: 12pxhelvetica;
@@ -10,11 +8,26 @@ p {
 button{
     width: 160px;
     height: 30px;
-    margin-left: 300px;
+    margin-left: 500px;
+    margin-bottom: 10px;
     font-family: Microsoft Yahei;
     font-size: 14px;
     font-weight: 600;
 }
+#sequence {
+  width: 600px;
+  height: 70px;
+  padding-left:40%;
+  font-family: Microsoft Yahei;
+  font-size: 15px;
+  font-weight: 600;
+}
+#tree {
+  position: relative;
+  margin-bottom:30px;
+  /*margin-top:50px;*/
+}
+
 .axis path,
 .axis line {
     fill: none;
