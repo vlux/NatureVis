@@ -71,7 +71,7 @@ svg_path = function(config) {
 };
 
 curve = fractalize({
-    axiom: 'GFFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFFG',
+    axiom: 'GFFFFFFFFFF[++GFFFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFF[++GFFFFFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFFFFG]FFFFFFFFFF[--GFFFFFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFF[--FFFFFFE]FFFF[++FFFFFFE]FFFFFFG]FFFFFFFFFFG',
     steps: 1,
     rules: {
 
@@ -84,7 +84,7 @@ d = svg_path({
 });
 
 width = 700;
-height = 800;
+height = 830;
 
 svg = d3.select('#tree')
     .append('svg')
@@ -144,37 +144,16 @@ svg.append('path')
     .attr('transform', "translate(" + (width / 2) + "," + (height) +
         ")");
 
-var tempx = rootx[0] - 30,
-    tempy = rooty[0],
-    segx = 30 / 100,
-    segy = (rooty[0] - rooty[21]) / 100;
-path3 = '';
-path3 += 'M' + rootx[0] + ' ' + rooty[0];
-path3 += 'L' + tempx + '  ' + rooty[0];
-for (var i = 0; i < 100; ++i) {
-    tempx += segx;
-    tempy -= segy
-    path3 += 'L' + tempx + ' ' + tempy;
-}
-var tempx = rootx[0] + 30,
-    tempy = rooty[0],
-    segx = 30 / 100,
-    segy = (rooty[0] - rooty[21]) / 100;
-path3 += 'M' + rootx[0] + ' ' + rooty[0];
-path3 += 'L' + tempx + '  ' + rooty[0];
-for (var i = 0; i < 100; ++i) {
-    tempx -= segx;
-    tempy -= segy
-    path3 += 'L' + tempx + ' ' + tempy;
-}
-
-svg.append('path')
-    .attr('d', path3)
-    .attr('fill', '#528552')
-    .attr('transform', "translate(" + (width / 2) + "," + (height) +
-        ")");
-
-
+var NO2ratio = [7.887, 6.925, 5.823, 4.796, 4.185, 3.631, 3.016, 2.426, 1.735,
+        1.000, 0
+    ],
+    SO2ratio = [9.691, 8.762, 7.743, 6.858, 5.735, 4.904, 3.817, 2.815, 1.896,
+        1.000, 0
+    ],
+    PM10ratio = [11.091, 10.024, 8.855, 7.615, 6.542, 5.485, 4.383, 3.224,
+        2.095, 1.000, 0
+    ],
+    leafration = [];
 
 var NO2dataset = [],
     SO2dataset = [],
@@ -218,12 +197,16 @@ d3.csv('sum_api.csv', function(data) {
 
 function draw(pollution) {
 
-    if (pollution == "NO2")
+    if (pollution == "NO2") {
         leafdataset = NO2dataset;
-    else if (pollution == "SO2")
+        leafration = NO2ratio;
+    } else if (pollution == "SO2") {
         leafdataset = SO2dataset;
-    else if (pollution == "PM10")
+        leafration = SO2ratio;
+    } else if (pollution == "PM10") {
         leafdataset = PM10dataset;
+        leafration = PM10ratio;
+    }
 
     d3.selectAll("#tree .leaf").remove();
 
@@ -273,12 +256,52 @@ function draw(pollution) {
         }
     }
 
+    var tempy = rooty[0],
+        segy = (rooty[0] - rooty[21]) / 10;
+    path3 = '';
+    path3 += 'M' + rootx[0] + ' ' + rooty[0];
+    path3 += 'L' + (rootx[0] - leafration[0] * 4.5) + '  ' + rooty[0];
+    for (var i = 1; i < 11; ++i) {
+        tempy -= segy
+        path3 += 'L' + (rootx[0] - leafration[i] * 4.5) + ' ' + tempy;
+    }
+    tempy = rooty[0];
+    path3 += 'M' + rootx[0] + ' ' + rooty[0];
+    path3 += 'L' + (rootx[0] + leafration[0] * 4.5) + '  ' + rooty[0];
+    for (var i = 1; i < 11; ++i) {
+        tempy -= segy
+        path3 += 'L' + (rootx[0] + leafration[i] * 4.5) + ' ' + tempy;
+    }
+
+    svg.append('path')
+        .attr('d', path3)
+        .attr('fill', '#528552')
+        .attr("class", "leaf")
+        .attr('transform', "translate(" + (width / 2) + "," + (height) +
+            ")");
+
+    var tempy = rooty[0],
+        segy = (rooty[0] - rooty[21]) / 10;
+    path4 = '';
+    for (var i = 1; i < 11; ++i) {
+        tempy -= segy;
+        path4 += 'M' + (rootx[0] - leafration[i] * 4.5) + ' ' + tempy;
+        path4 += 'L' + (rootx[0] + leafration[i] * 4.5) + ' ' + tempy;
+    }
+    svg.append('path')
+        .attr('d', path4)
+        .attr('stroke', '#98df8a')
+        .attr("stroke-width", "2px")
+        .attr("class", "leaf")
+        .attr('transform', "translate(" + (width / 2) + "," + (height) +
+            ")");
+
     d3.selectAll("#tree text").remove();
     svg.append("text")
         .attr('dx', function() {
             return width / 2 - 30;
         })
-        .attr("dy", "50")
+        .attr("dy", "80")
         .attr("fill", "silver")
         .attr("font-size", "30px")
         .text(pollution);

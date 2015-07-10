@@ -3,7 +3,7 @@ var colorrange = [];
 
 function stream(csvpath) {
 
-    colorrange = ["#10e3e3", "#7f7f7f", "#ff7f0e", "#A6BDDB", "#D0D1E6",
+    colorrange = ["#10e3e3", "#528552", "#ff7f0e", "#A6BDDB", "#D0D1E6",
         "#F1EEF6"
     ]
     strokecolor = colorrange[0];

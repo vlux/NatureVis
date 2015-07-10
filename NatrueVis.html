@@ -6,14 +6,14 @@
       <script src="d3/d3.js"></script>
       <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
       <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-      <link href="css/NatureVis.css" rel="stylesheet" type="text/css" />
-      <link href="css/button.css" rel="stylesheet" type="text/css" />
+      <link href="NatureVis.css" rel="stylesheet" type="text/css" />
+      <link href="button.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
       <div id = "header">
           <h1 class = "hfont">NatureVis</h1>
       </div>
-      <div id="sequence" style = "text-align:center">
+      <div style = "text-align:center">
          <button id = "change1" class="button button-large button-plain button-border button-box ">NO2</button>
          <button id = "change2" class="button button-large button-plain button-border button-box ">SO2</button>
          <button id = "change3" class="button button-large button-plain button-border button-box ">PM10</button>
@@ -21,14 +21,14 @@
       <div id="tree" style = "text-align:center"></div>
       <div id="chart" style = "position:relative"></div>
       <div id="footer">
-        <p>Supervised By <a target="blank" href="http://pub.cs.sunysb.edu/~shecheng/index.html">Shenghui Cheng</a></p>
-        <p>Implemented By <a target="blank" href="">Xuanwu Yue</a></p>
+        <p>Supervised By <a target="_blank" href="http://pub.cs.sunysb.edu/~shecheng/index.html">Shenghui Cheng</a></p>
+        <p>Implemented By Xuanwu Yue<a target="_blank" href="http://shiyida.net:8080/vis/cv_yxw.pdf">(CV)</a></p>
         <p>Started in June 2015.</p>
       </div>
    </body>
 
-   <script src = "js/tree.js"></script>
-   <script src = "js/stream.js"></script>
+   <script src = "tree.js"></script>
+   <script src = "stream.js"></script>
    <script>
        stream("stream.csv");
        d3.selectAll("#change1").on("click", function() {
