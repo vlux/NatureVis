@@ -1,7 +1,7 @@
 var datearray = [];
 var colorrange = [];
 
-function chart(csvpath) {
+function stream(csvpath) {
 
     colorrange = ["#10e3e3", "#7f7f7f", "#ff7f0e", "#A6BDDB", "#D0D1E6",
         "#F1EEF6"
@@ -19,17 +19,29 @@ function chart(csvpath) {
     var width = document.body.clientWidth - margin.left - margin.right;
     var height = 400 - margin.top - margin.bottom;
 
-    var tooltip = d3.select("body")
+    var tooltip = d3.select("#chart")
         .append("div")
         .attr("class", "remove")
         .style("position", "absolute")
         .style("z-index", "20")
         .style("visibility", "hidden")
-        .style("top", "20px")
+        .style("top", "5px")
         .style("left", "80px")
         .style("font-size", "17px")
         .style("font-weight", "bold")
         .style("color", "silver");
+
+    var vertical = d3.select("#chart")
+        .append("div")
+        .attr("class", "remove")
+        .style("position", "absolute")
+        .style("z-index", "19")
+        .style("width", "1px")
+        .style("height", "360px")
+        .style("top", "10px")
+        .style("bottom", "30px")
+        .style("left", "0px")
+        .style("background", "white");
 
     var x = d3.time.scale().range([0, width]);
 
@@ -70,7 +82,7 @@ function chart(csvpath) {
             return y(d.y0 + d.y);
         });
 
-    var svg = d3.select(".chart")
+    var svg = d3.select("#chart")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -148,10 +160,10 @@ function chart(csvpath) {
                 d3.select(this)
                     .classed("hover", true)
                     .attr("stroke", strokecolor)
-                    .attr("stroke-width", "0.5px"),
+                    .attr("stroke-width", "0.5px")
 
-                    tooltip.html("<p>" + d.key + "<br>" + pro +
-                        "</p>").style("visibility", "visible");
+                tooltip.html("<p>" + d.key + "<br>" + pro +
+                    "</p>").style("visibility", "visible");
             })
             .on("mouseout", function(d, i) {
                 svg.selectAll(".layer")
@@ -160,25 +172,13 @@ function chart(csvpath) {
 
                 d3.select(this)
                     .classed("hover", false)
-                    .attr("stroke-width", "0px"),
+                    .attr("stroke-width", "0px")
 
-                    tooltip.html("<p>" + d.key + "<br>" + pro +
-                        "</p>").style("visibility", "hidden");
+                tooltip.html("<p>" + d.key + "<br>" + pro +
+                    "</p>").style("visibility", "hidden");
             })
 
-        var vertical = d3.select(".chart")
-            .append("div")
-            .attr("class", "remove")
-            .style("position", "absolute")
-            .style("z-index", "19")
-            .style("width", "1px")
-            .style("height", "380px")
-            .style("top", "10px")
-            .style("bottom", "30px")
-            .style("left", "0px")
-            .style("background", "white");
-
-        d3.select(".chart")
+        d3.select("#chart")
             .on("mouseout", function() {
                 mousex = d3.mouse(this);
                 mousex = mousex[0] + 5;

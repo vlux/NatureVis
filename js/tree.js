@@ -119,6 +119,7 @@ var tip = d3.tip()
     });
 
 svg.call(tip);
+
 path2 = '';
 for (var i = 1; i <= 20; i += 4) {
     path2 += 'M' + rootx[i] + ' ' + rooty[i]
@@ -224,7 +225,7 @@ function draw(pollution) {
     else if (pollution == "PM10")
         leafdataset = PM10dataset;
 
-    d3.select("#tree #leaf").remove();
+    d3.selectAll("#tree .leaf").remove();
 
     var months = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273,
         304, 334, 365

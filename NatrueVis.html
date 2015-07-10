@@ -10,18 +10,27 @@
       <link href="css/button.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
-      <div class="chart"></div>
+      <div id = "header">
+          <h1 class = "hfont">NatureVis</h1>
+      </div>
       <div id="sequence" style = "text-align:center">
          <button id = "change1" class="button button-large button-plain button-border button-box ">NO2</button>
          <button id = "change2" class="button button-large button-plain button-border button-box ">SO2</button>
          <button id = "change3" class="button button-large button-plain button-border button-box ">PM10</button>
       </div>
       <div id="tree" style = "text-align:center"></div>
+      <div id="chart" style = "position:relative"></div>
+      <div id="footer">
+        <p>Supervised By <a target="blank" href="http://pub.cs.sunysb.edu/~shecheng/index.html">Shenghui Cheng</a></p>
+        <p>Implemented By <a target="blank" href="">Xuanwu Yue</a></p>
+        <p>Started in June 2015.</p>
+      </div>
    </body>
+
    <script src = "js/tree.js"></script>
    <script src = "js/stream.js"></script>
    <script>
-       chart("stream.csv");
+       stream("stream.csv");
        d3.selectAll("#change1").on("click", function() {
            draw("NO2");
        });

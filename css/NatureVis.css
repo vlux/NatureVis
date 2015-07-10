@@ -5,17 +5,32 @@ body {
     background-attachment:fixed;
 }
 p {
-    font: 12pxhelvetica;
+    font: 12px helvetica;
 }
-/*button{
-    width: 160px;
-    height: 30px;
-    margin-left: 500px;
-    margin-bottom: 10px;
-    font-family: Microsoft Yahei;
-    font-size: 14px;
+#header{
+    height: 70px;
+}
+.hfont{
+    padding-left: 20%;
     font-weight: 600;
-}*/
+    font-family: Courier New;
+    font-size: 40px;
+    color: rgba(242, 113, 113, 0.82);
+    margin: 10px 0;
+}
+#footer {
+  text-align: center;
+  margin: 40px;
+  letter-spacing: .2em;
+}
+#footer p {
+  color: #82d1f3;
+  text-decoration: none;
+  font-size: 19px ;
+  font-family: Courier New ;
+  font-weight:600;
+}
+
 #change1{
     margin:0 10%;
 }
@@ -53,6 +68,7 @@ p {
     font-family: Microsoft Yahei;
     fill:white;
 }
+
 
 .curve {
     fill: none;
