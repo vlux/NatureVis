@@ -284,10 +284,10 @@
 // bemid = 'FFFFFFFFFF';
 // bran1 = 'FFFF';
 // bran2 = 'FFFFFF';
-// branc1 = [bran1 '[++' bran2 'E]' bran1 '[--' bran2 'E]'];
-// branc2 = [bran1 '[--' bran2 'E]' bran1 '[++' bran2 'E]'];
-// branch1 = ['GF'];
-// branch2 = ['GF'];
+// branc1 = [bran1 'M[++' bran2 'E]' bran1 'M[--' bran2 'E]'];
+// branc2 = [bran1 'M[--' bran2 'E]' bran1 'M[++' bran2 'E]'];
+// branch1 = ['GFF'];
+// branch2 = ['GFF'];
 // month = 12;
 // for i = 1: month / 2
 //     branch1 = [branch1 branc1];
