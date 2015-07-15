@@ -281,13 +281,13 @@
 //     .attr('fill', 'red')
 
 // matlab code
-// bemid = 'FFFFFFFFFF';
+// bemid = 'FFFFFFFFFFF';
 // bran1 = 'FFFF';
-// bran2 = 'FFFFFF';
+// bran2 = 'FFFFFFFF';
 // branc1 = [bran1 'M[++' bran2 'E]' bran1 'M[--' bran2 'E]'];
 // branc2 = [bran1 'M[--' bran2 'E]' bran1 'M[++' bran2 'E]'];
-// branch1 = ['GFF'];
-// branch2 = ['GFF'];
+// branch1 = ['GFFF'];
+// branch2 = ['GFFF'];
 // month = 12;
 // for i = 1: month / 2
 //     branch1 = [branch1 branc1];
