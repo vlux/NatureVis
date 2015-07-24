@@ -22,7 +22,7 @@ p {
 }
 #footer {
   text-align: center;
-  margin: 40px;
+  margin: 60px 0px;
   letter-spacing: .2em;
 }
 #footer p {
@@ -59,7 +59,6 @@ p {
 .axis text{
     font-size:15px;
     font-weight:600;
-    font-family: Microsoft Yahei;
     fill:white;
 }
 

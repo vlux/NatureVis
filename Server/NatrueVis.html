@@ -19,16 +19,14 @@
          <button id = "change3" class="button button-large button-plain button-border button-box ">PM10</button>
       </div>
       <div id="tree" style = "text-align:center"></div>
-      <div id="chart" style = "position:relative"></div>
       <div id="footer">
         <p>Supervised By <a target="_blank" href="http://pub.cs.sunysb.edu/~shecheng/index.html">Shenghui Cheng</a></p>
-        <p>Implemented By Xuanwu Yue<a target="_blank" href="http://shiyida.net:8080/vis/cv_yxw.pdf">(CV)</a></p>
+        <p>Implemented By Xuanwu Yue<a target="_blank" href="http://shiyida.net:8080/naturevis/cv_yxw.pdf">(CV)</a></p>
         <p>Started in June 2015.</p>
       </div>
    </body>
 
-   <script src = "tree.js"></script>
-   <script src = "stream.js"></script>
+   <script src = "combine.js"></script>
    <script>
        stream("stream.csv");
        d3.selectAll("#change1").on("click", function() {
