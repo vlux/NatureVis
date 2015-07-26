@@ -274,6 +274,7 @@ d3.csv('sum_api.csv', function(data) {
             ]);
     });
     draw("NO2");
+    
 })
 
 
