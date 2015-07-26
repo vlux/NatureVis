@@ -11,6 +11,23 @@ p {
     font-family: Courier New;
     font-size: 20px;
 }
+#loading{
+  background-color:#111;
+  position:fixed;
+  line-height:11px;
+  height:100%;
+  width:100%;
+  z-index: 7;
+  opacity: .8;
+}
+#loading_text {
+  display:block;
+  font-size:3em;
+  font-family:Consolas;
+  color:#918d8d;
+  position:relative;
+  margin-top:25%;
+}
 #header{
     height: 100px;
 }
@@ -52,40 +69,19 @@ p {
 {
      position:absolute;
      z-index:1;
-     left: 48.2%;
      top: 68.8%;
 }
 #Trans_SO2
 {
      position:absolute;
      z-index:2;
-     left: 47.7%;
      top: 68.8%;
 }
 #Trans_PM10
 {
      position:absolute;
      z-index:3;
-     left: 47.4%;
      top: 68.8%;
-}
-
-#loading{
-  background-color:#111;
-  position:fixed;
-  line-height:11px;
-  height:100%;
-  width:100%;
-  z-index: 7;
-  opacity: .8;
-}
-#loading_text {
-  display:block;
-  font-size:2em;
-  font-family:Consolas;
-  color:#918d8d;
-  position:relative;
-  margin-top:25%;
 }
 
 .axis path,

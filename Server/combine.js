@@ -126,6 +126,7 @@ var tip = d3.tip()
 
 svg.call(tip);
 
+
 //preprocess the data
 var NO2dataset = [],
     SO2dataset = [],
@@ -274,7 +275,6 @@ d3.csv('sum_api.csv', function(data) {
             ]);
     });
     draw("NO2");
-    
 })
 
 

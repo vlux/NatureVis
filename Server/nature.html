@@ -48,6 +48,14 @@
    <script src = "combine.js"></script>
    <script>
        //init
+       var cwidth = document.body.clientWidth;
+       var Trans_NO2_left = (cwidth / 2 - 30) * 100/ cwidth;
+       var Trans_SO2_left = (cwidth / 2 - 40) * 100/ cwidth;
+       var Trans_PM10_left = (cwidth / 2 - 45) * 100/ cwidth;
+       $("#Trans_NO2").css("left",Trans_NO2_left + "%");
+       $("#Trans_SO2").css("left",Trans_SO2_left + "%");
+       $("#Trans_PM10").css("left",Trans_PM10_left + "%");
+
        stream("stream.csv");
        $("#Trans_SO2").css("display","none");
        $("#Trans_PM10").css("display","none");
