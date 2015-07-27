@@ -298,9 +298,7 @@ function draw(pollution) {
     //remove the leaf and trunk of the tree
     d3.selectAll("#tree .leaf").remove();
 
-    var months = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273,
-        304, 334, 365
-    ];
+    var months = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365];
 
     for (var j = 0; j < 10; ++j) {
         for (var k = 1; k <= 12; ++k) {
@@ -317,7 +315,7 @@ function draw(pollution) {
             svg.selectAll(".solidArcc")
                 .data(pie(tapi))
                 .enter().append("path")
-                .attr("fill", "rgb(20, 119, 174)")
+                .attr("fill", "#93c47d")
                 //.attr("stroke", "silver")
                 //.attr("class", "solidArc")
                 .attr("d", arc)
@@ -331,7 +329,14 @@ function draw(pollution) {
             svg.selectAll(".solidArcs")
                 .data(pie(tleaf))
                 .enter().append("path")
-                .attr("fill", "rgb(230, 233, 82)")
+                .attr("fill", function(){
+                    if(pollution == "NO2")
+                        return "#783f04"
+                    else if(pollution == "SO2")
+                        return "#ffffff"
+                    else if(pollution == "PM10")
+                        return "rgb(230, 233, 82)"
+                })
                 //.attr("stroke", "silver")
                 //.attr("class", "solidArc")
                 .attr("d", arc)
@@ -364,25 +369,8 @@ function draw(pollution) {
 
     svg.append('path')
         .attr('d', path_trunk)
-        .attr('fill', '#528552')
-        .attr("opacity", "0.9")
-        .attr("class", "leaf")
-        .attr('transform', "translate(" + (width / 2) + "," + (height) +
-            ")");
-
-    //path_trunkline is the line in the trunk
-    var tempy = rooty[0],
-        segy = (rooty[0] - rooty[21]) / 10;
-    path_trunkline = '';
-    for (var i = 1; i < 11; ++i) {
-        tempy -= segy;
-        path_trunkline += 'M' + (rootx[0] - leafration[i] * 4.5) + ' ' + tempy;
-        path_trunkline += 'L' + (rootx[0] + leafration[i] * 4.5) + ' ' + tempy;
-    }
-    svg.append('path')
-        .attr('d', path_trunkline)
-        .attr('stroke', '#98df8a')
-        .attr("stroke-width", "2px")
+        .attr('fill', '#8E6C48')
+        .attr("opacity", "0.95")
         .attr("class", "leaf")
         .attr('transform', "translate(" + (width / 2) + "," + (height) +
             ")");
@@ -440,8 +428,25 @@ function draw(pollution) {
 
     svg.append('path')
         .attr('d', path_branch)
-        .attr('fill', 'rgb(60,148,139)')
-        .attr("opacity", "0.9")
+        .attr('fill', '#8E6C48')
+        .attr("opacity", "0.95")
+        .attr("class", "leaf")
+        .attr('transform', "translate(" + (width / 2) + "," + (height) +
+            ")");
+
+    //path_trunkline is the line in the trunk
+    var tempy = rooty[0],
+        segy = (rooty[0] - rooty[21]) / 10;
+    path_trunkline = '';
+    for (var i = 1; i < 11; ++i) {
+        tempy -= segy;
+        path_trunkline += 'M' + (rootx[0] - leafration[i] * 4.5) + ' ' + tempy;
+        path_trunkline += 'L' + (rootx[0] + leafration[i] * 4.5) + ' ' + tempy;
+    }
+    svg.append('path')
+        .attr('d', path_trunkline)
+        .attr('stroke', '#C5A98C')
+        .attr("stroke-width", "2px")
         .attr("class", "leaf")
         .attr('transform', "translate(" + (width / 2) + "," + (height) +
             ")");
@@ -453,10 +458,10 @@ function draw(pollution) {
         })
         .attr("class", "leaf")
         .attr("dy", "80")
-        .attr("fill", "silver")
+        .attr("fill", "white")
         .attr("font-size", "30px")
         .attr("font-family", "Courier New")
-        .attr("font-weight", "600")
+        .attr("font-weight", "500")
         .text(pollution);
 }
 
@@ -466,9 +471,8 @@ function stream(csvpath) {
     var datearray = [];
     var colorrange = [];
 
-    colorrange = ["#10e3e3", "#528552", "#ff7f0e", "#A6BDDB", "#D0D1E6",
-        "#F1EEF6"
-    ]
+    //Order: PM10,SO2,NO2 : "rgb(230, 233, 82)", "#ffffff", "#783f04",
+    colorrange = ["#10e3e3", "#528552", "#ff7f0e","#A6BDDB", "#D0D1E6", "#F1EEF6"]
     strokecolor = colorrange[0];
 
     var format = d3.time.format("%y/%m/%d");

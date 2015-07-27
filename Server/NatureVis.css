@@ -1,6 +1,6 @@
 html,body {
     font: 10px sans-serif;
-    background-image:url(back.png);
+    background-image:url(img/back2.jpg);
     background-repeat:no-repeat;
     background-attachment:fixed;
     margin:0;
@@ -33,7 +33,7 @@ p {
 }
 .hfont{
     padding-left: 20%;
-    font-weight: 600;
+    font-weight: 500;
     font-family: Courier New;
     font-size: 45px;
     color: rgba(242, 113, 113, 0.82);
