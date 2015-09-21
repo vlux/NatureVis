@@ -76,7 +76,7 @@ svg_path = function(config) {
 };
 
 curve = fractalize({
-    axiom: 'GFFFFFFFFFFF[++GFFFFFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFF[--GFFFFFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFF[++GFFFFFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFF[--GFFFFFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFF[++GFFFFFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFF[--GFFFFFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFF[++GFFFFFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFF[--GFFFFFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFF[++GFFFFFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFF[--GFFFFFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFM[--FFFFFFFFE]FFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFG',
+    axiom: 'GFFFFFFFFFFFF[++GFFFFFFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFF[--GFFFFFFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFF[++GFFFFFFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFF[--GFFFFFFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFF[++GFFFFFFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFF[--GFFFFFFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFF[++GFFFFFFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFF[--GFFFFFFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFF[++GFFFFFFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFF[--GFFFFFFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFM[--FFFFFFFFE]FFFFFM[++FFFFFFFFE]FFFFFFFFG]FFFFFFFFFFFFG',
     steps: 1,
     rules: {
 
@@ -88,8 +88,8 @@ d = svg_path({
     da: 30 / 180 * Math.PI
 });
 
-width = 700;
-height = 900;
+width = 1100;
+height = 1000;
 
 svg = d3.select('#tree')
     .append('svg')
@@ -103,7 +103,7 @@ svg.append('path')
     .attr('transform', "translate(" + (width / 2) + "," + (height) +
         ")");
 
-var radius = Math.min(width, height) / 10;
+var radius = 80;
 
 var pie = d3.layout.pie()
     .sort(null)
@@ -329,12 +329,12 @@ function draw(pollution) {
             svg.selectAll(".solidArcs")
                 .data(pie(tleaf))
                 .enter().append("path")
-                .attr("fill", function(){
-                    if(pollution == "NO2")
+                .attr("fill", function() {
+                    if (pollution == "NO2")
                         return "#783f04"
-                    else if(pollution == "SO2")
+                    else if (pollution == "SO2")
                         return "#ffffff"
-                    else if(pollution == "PM10")
+                    else if (pollution == "PM10")
                         return "rgb(230, 233, 82)"
                 })
                 //.attr("stroke", "silver")
@@ -354,23 +354,52 @@ function draw(pollution) {
         segy = (rooty[0] - rooty[21]) / 10;
     path_trunk = '';
     path_trunk += 'M' + rootx[0] + ' ' + rooty[0];
-    path_trunk += 'L' + (rootx[0] - leafration[0] * 4.5) + '  ' + rooty[0];
+    path_trunk += 'L' + (rootx[0] - leafration[0] * leafration[0] / 1.45) +
+        '  ' +
+        rooty[0];
     for (var i = 1; i < 11; ++i) {
         tempy -= segy
-        path_trunk += 'L' + (rootx[0] - leafration[i] * 4.5) + ' ' + tempy;
+        path_trunk += 'L' + (rootx[0] - leafration[i] * leafration[i] / 1.45) +
+            ' ' +
+            tempy;
     }
     tempy = rooty[0];
     path_trunk += 'M' + rootx[0] + ' ' + rooty[0];
-    path_trunk += 'L' + (rootx[0] + leafration[0] * 4.5) + '  ' + rooty[0];
+    path_trunk += 'L' + (rootx[0] + leafration[0] * leafration[0] / 1.45) +
+        '  ' +
+        rooty[0];
     for (var i = 1; i < 11; ++i) {
         tempy -= segy
-        path_trunk += 'L' + (rootx[0] + leafration[i] * 4.5) + ' ' + tempy;
+        path_trunk += 'L' + (rootx[0] + leafration[i] * leafration[i] / 1.45) +
+            ' ' +
+            tempy;
     }
 
     svg.append('path')
         .attr('d', path_trunk)
         .attr('fill', '#8E6C48')
-        .attr("opacity", "0.95")
+        .attr("opacity", "0.90")
+        .attr("class", "leaf")
+        .attr('transform', "translate(" + (width / 2) + "," + (height) +
+            ")");
+
+    //path_trunkline is the line in the trunk
+    var tempy = rooty[0],
+        segy = (rooty[0] - rooty[21]) / 10;
+    path_trunkline = '';
+    for (var i = 1; i < 11; ++i) {
+        tempy -= segy;
+        path_trunkline += 'M' + (rootx[0] - leafration[i] * leafration[i] /
+                1.45) +
+            ' ' + tempy;
+        path_trunkline += 'L' + (rootx[0] + leafration[i] * leafration[i] /
+                1.45) +
+            ' ' + tempy;
+    }
+    svg.append('path')
+        .attr('d', path_trunkline)
+        .attr('stroke', '#C5A98C')
+        .attr("stroke-width", "2px")
         .attr("class", "leaf")
         .attr('transform', "translate(" + (width / 2) + "," + (height) +
             ")");
@@ -429,24 +458,7 @@ function draw(pollution) {
     svg.append('path')
         .attr('d', path_branch)
         .attr('fill', '#8E6C48')
-        .attr("opacity", "0.95")
-        .attr("class", "leaf")
-        .attr('transform', "translate(" + (width / 2) + "," + (height) +
-            ")");
-
-    //path_trunkline is the line in the trunk
-    var tempy = rooty[0],
-        segy = (rooty[0] - rooty[21]) / 10;
-    path_trunkline = '';
-    for (var i = 1; i < 11; ++i) {
-        tempy -= segy;
-        path_trunkline += 'M' + (rootx[0] - leafration[i] * 4.5) + ' ' + tempy;
-        path_trunkline += 'L' + (rootx[0] + leafration[i] * 4.5) + ' ' + tempy;
-    }
-    svg.append('path')
-        .attr('d', path_trunkline)
-        .attr('stroke', '#C5A98C')
-        .attr("stroke-width", "2px")
+        .attr("opacity", "0.92")
         .attr("class", "leaf")
         .attr('transform', "translate(" + (width / 2) + "," + (height) +
             ")");
@@ -472,7 +484,9 @@ function stream(csvpath) {
     var colorrange = [];
 
     //Order: PM10,SO2,NO2 : "rgb(230, 233, 82)", "#ffffff", "#783f04",
-    colorrange = ["#10e3e3", "#528552", "#ff7f0e","#A6BDDB", "#D0D1E6", "#F1EEF6"]
+    colorrange = ["#10e3e3", "#528552", "#ff7f0e", "#A6BDDB", "#D0D1E6",
+        "#F1EEF6"
+    ]
     strokecolor = colorrange[0];
 
     var format = d3.time.format("%y/%m/%d");
@@ -492,7 +506,7 @@ function stream(csvpath) {
         .style("position", "absolute")
         .style("z-index", "20")
         .style("visibility", "hidden")
-        .style("top", "900px")
+        .style("top", "1000px")
         .style("left", "80px")
         .style("font-size", "17px")
         .style("font-weight", "bold")
@@ -505,7 +519,7 @@ function stream(csvpath) {
         .style("z-index", "19")
         .style("width", "1px")
         .style("height", "360px")
-        .style("top", "910px")
+        .style("top", "1010px")
         .style("bottom", "30px")
         .style("left", "0px")
         .style("background", "white");
@@ -608,7 +622,6 @@ function stream(csvpath) {
                     })
             })
             .on("mousemove", function(d, i) {
-
                 mousex = d3.mouse(this);
                 mousex = mousex[0];
                 var invertedx = x.invert(mousex);
