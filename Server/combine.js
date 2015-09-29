@@ -498,7 +498,7 @@ function stream(csvpath) {
         left: 50
     };
     var width = document.body.clientWidth - margin.left - margin.right;
-    var height = 400 - margin.top - margin.bottom;
+    var height = 450 - margin.top - margin.bottom;
 
     var tooltip = d3.select("#tree")
         .append("div")
@@ -518,8 +518,8 @@ function stream(csvpath) {
         .style("position", "absolute")
         .style("z-index", "19")
         .style("width", "1px")
-        .style("height", "360px")
-        .style("top", "1010px")
+        .style("height", "400px")
+        .style("top", "1020px")
         .style("bottom", "30px")
         .style("left", "0px")
         .style("background", "white");
