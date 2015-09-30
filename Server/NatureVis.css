@@ -11,21 +11,6 @@ p {
     font-family: Courier New;
     font-size: 20px;
 }
-#tree span{
-    z-index: 6;
-    font-family: Courier New;
-    font-size: 20px;
-    font-weight:600;
-    color: white;
-}
-.yearleft{
-    position:absolute;
-    left:27%;
-}
-.yearright{
-    position:absolute;
-    left:70.5%;
-}
 #loading{
   background-color:#111;
   position:fixed;
@@ -85,18 +70,24 @@ p {
      position:absolute;
      z-index:1;
      top: 65.7%;
+     left:50% ;
+     margin-left:-135px;
 }
 #Trans_SO2
 {
      position:absolute;
      z-index:2;
      top: 68.6%;
+     left:50% ;
+     margin-left:-220px;
 }
 #Trans_PM10
 {
      position:absolute;
      z-index:3;
      top: 68.6%;
+     left:50% ;
+     margin-left:-285px;
 }
 
 .axis path,

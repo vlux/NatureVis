@@ -26,16 +26,6 @@
       </div>
 
       <div id="tree" style = "text-align:center">
-          <span class = "yearleft" style = "top:48%">2002</span>
-          <span class = "yearleft" style = "top:38%">2004</span>
-          <span class = "yearleft" style = "top:28%">2006</span>
-          <span class = "yearleft" style = "top:18%">2008</span>
-          <span class = "yearleft" style = "top:8%">2010</span>
-          <span class = "yearright" style = "top:3%">2011</span>
-          <span class = "yearright" style = "top:13%">2009</span>
-          <span class = "yearright" style = "top:23%">2007</span>
-          <span class = "yearright" style = "top:33%">2005</span>
-          <span class = "yearright" style = "top:43%">2003</span>
           <div id = "Trans_NO2">
               <img src = "img/NO2.png" style = "display:block">
           </div>
@@ -58,13 +48,13 @@
    <script src = "combine.js"></script>
    <script>
        //init
-       var cwidth = document.body.clientWidth;
-       var Trans_NO2_left = (cwidth / 2 - 135) * 100/ cwidth;
-       var Trans_SO2_left = (cwidth / 2 - 220) * 100/ cwidth;
-       var Trans_PM10_left = (cwidth / 2 - 290) * 100/ cwidth;
-       $("#Trans_NO2").css("left",Trans_NO2_left + "%");
-       $("#Trans_SO2").css("left",Trans_SO2_left + "%");
-       $("#Trans_PM10").css("left",Trans_PM10_left + "%");
+    //    var cwidth = document.body.clientWidth;
+    //    var Trans_NO2_left = (cwidth / 2 - 135) * 100/ cwidth;
+    //    var Trans_SO2_left = (cwidth / 2 - 220) * 100/ cwidth;
+    //    var Trans_PM10_left = (cwidth / 2 - 285) * 100/ cwidth;
+    //    $("#Trans_NO2").css("left",Trans_NO2_left + "%");
+    //    $("#Trans_SO2").css("left",Trans_SO2_left + "%");
+    //    $("#Trans_PM10").css("left",Trans_PM10_left + "%");
 
        stream("stream.csv");
        $("#Trans_SO2").css("display","none");

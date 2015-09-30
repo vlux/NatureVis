@@ -477,6 +477,25 @@ function draw(pollution) {
         .text(pollution);
 }
 
+for (var i = 0; i < 10; ++i) {
+    svg.append("text")
+        .attr('dx', function() {
+            if (i % 2 == 1)
+                return rootx[2 * (i + 1)] + width / 2 + 10
+            else
+                return rootx[2 * (i + 1)] + width / 2 - 60
+        })
+        .attr("dy", function() {
+            return rooty[2 * (i + 1)] + height
+        })
+        .attr("fill", "white")
+        .attr("font-size", "20px")
+        .attr("font-family", "Courier New")
+        .attr("font-weight", "600")
+        .attr("class", "where")
+        .text(i + 2002);
+}
+
 //draw the stream
 function stream(csvpath) {
 
