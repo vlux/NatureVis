@@ -473,7 +473,7 @@ function draw(pollution) {
         .attr("fill", "white")
         .attr("font-size", "30px")
         .attr("font-family", "Courier New")
-        .attr("font-weight", "500")
+        .attr("font-weight", "600")
         .text(pollution);
 }
 
@@ -516,7 +516,7 @@ function stream(csvpath) {
         bottom: 30,
         left: 50
     };
-    var width = document.body.clientWidth - margin.left - margin.right;
+    var width = 1324 - margin.left - margin.right;
     var height = 450 - margin.top - margin.bottom;
 
     var tooltip = d3.select("#tree")
@@ -525,9 +525,9 @@ function stream(csvpath) {
         .style("position", "absolute")
         .style("z-index", "20")
         .style("visibility", "hidden")
-        .style("top", "1000px")
-        .style("left", "80px")
-        .style("font-size", "17px")
+        .style("top", "92%")
+        .style("left", "46%")
+        .style("font-size", "15px")
         .style("font-weight", "bold")
         .style("color", "silver");
 
